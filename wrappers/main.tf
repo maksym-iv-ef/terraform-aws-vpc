@@ -168,6 +168,7 @@ module "wrapper" {
   flow_log_cloudwatch_iam_role_arn                                  = try(each.value.flow_log_cloudwatch_iam_role_arn, var.defaults.flow_log_cloudwatch_iam_role_arn, "")
   flow_log_cloudwatch_iam_role_conditions                           = try(each.value.flow_log_cloudwatch_iam_role_conditions, var.defaults.flow_log_cloudwatch_iam_role_conditions, [])
   flow_log_cloudwatch_log_group_class                               = try(each.value.flow_log_cloudwatch_log_group_class, var.defaults.flow_log_cloudwatch_log_group_class, null)
+  flow_log_cloudwatch_log_group_deletion_protection_enabled         = try(each.value.flow_log_cloudwatch_log_group_deletion_protection_enabled, var.defaults.flow_log_cloudwatch_log_group_deletion_protection_enabled, false)
   flow_log_cloudwatch_log_group_kms_key_id                          = try(each.value.flow_log_cloudwatch_log_group_kms_key_id, var.defaults.flow_log_cloudwatch_log_group_kms_key_id, null)
   flow_log_cloudwatch_log_group_name_prefix                         = try(each.value.flow_log_cloudwatch_log_group_name_prefix, var.defaults.flow_log_cloudwatch_log_group_name_prefix, "/aws/vpc-flow-log/")
   flow_log_cloudwatch_log_group_name_suffix                         = try(each.value.flow_log_cloudwatch_log_group_name_suffix, var.defaults.flow_log_cloudwatch_log_group_name_suffix, "")

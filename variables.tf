@@ -1662,7 +1662,13 @@ variable "flow_log_cloudwatch_log_group_kms_key_id" {
 }
 
 variable "flow_log_cloudwatch_log_group_skip_destroy" {
-  description = " Set to true if you do not wish the log group (and any logs it may contain) to be deleted at destroy time, and instead just remove the log group from the Terraform state"
+  description = "Set to true if you do not wish the log group (and any logs it may contain) to be deleted at destroy time, and instead just remove the log group from the Terraform state"
+  type        = bool
+  default     = false
+}
+
+variable "flow_log_cloudwatch_log_group_deletion_protection_enabled" {
+  description = "If true, enables CloudWatch log group deletion protection"
   type        = bool
   default     = false
 }
